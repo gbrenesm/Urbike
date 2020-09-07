@@ -9,27 +9,33 @@ const {
   googleProcess,
   googleRedirect,
   facebookProcess,
-  facebookRedirect
+  facebookRedirect,
+  logout
 } = require("../controllers/auth")
 
 
-////////////////Sign up/////////////////
+//////////////// Sign up /////////////////
 router.get("/signup", signupView)
 router.post("/signup", signupProcess)
 
 
-////////////////Login/////////////////
+//////////////// Login /////////////////
 router.get("/login", loginView)
 router.post("/login", loginProcess)
 
 
-////////////////Google/////////////////
+//////////////// Google /////////////////
 router.get("/auth/google", googleProcess)
 router.get("/auth/google/callback", googleRedirect)
 
-////////////////Facebook/////////////////
+
+//////////////// Facebook /////////////////
 router.get("/auth/facebook", facebookProcess)
 router.get("/auth/facebook/callback", facebookRedirect)
+
+
+//////////////// Facebook /////////////////
+router.get("/logout", logout)
 
 
 

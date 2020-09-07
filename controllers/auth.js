@@ -64,3 +64,11 @@ exports.facebookRedirect = passport.authenticate("facebook", {
   failureRedirect: "/login",
   failureFlash: true
 })
+
+
+///////////////// Logout ////////////////////////
+
+exports.logout = (req, res) => {
+  req.logout()
+  res.redirect("/")
+}

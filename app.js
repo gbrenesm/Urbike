@@ -8,10 +8,13 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const flash        = require("connect-flash")
 
 
 mongoose
-  .connect('mongodb://localhost/urbike', {useNewUrlParser: true})
+  .connect('mongodb://localhost/urbike', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -29,6 +32,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(flash());
+require("./config/session")(app)
 
 // Express View engine setup
 
@@ -51,8 +56,14 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 
-const index = require('./routes/index');
+const index = require('./routes/index.routes');
 app.use('/', index);
+
+const auth = require("./routes/auth.routes")
+app.use("/", auth);
+
+const profile =require("./routes/profile.routes")
+app.use("/profile", profile)
 
 
 module.exports = app;

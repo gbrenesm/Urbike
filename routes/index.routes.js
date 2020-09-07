@@ -6,13 +6,6 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
-router.get('/login', (req, res, next) => {
-  res.render('login')
-})
-
-router.get('/sigup', (req, res, next) => {
-  res.render('sigup')
-})
 
 router.get('/routes', (req, res, next) => {
   res.render('routes')

@@ -65,5 +65,8 @@ app.use("/", auth);
 const profile =require("./routes/profile.routes")
 app.use("/profile", profile)
 
+const post = require("./routes/posts.routes")
+app.use("/", post)
+
 
 module.exports = app;

@@ -6,9 +6,9 @@ router.get('/', (req, res, next) => {
 });
 
 
-// router.get('/routes', (req, res, next) => {
-//   res.render('routes')
-// })
+router.get('/routes', (req, res, next) => {
+  res.render('routes')
+})
 
 // router.get('/data', (req, res, next) => {
 //   res.render('data')

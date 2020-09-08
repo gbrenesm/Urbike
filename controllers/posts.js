@@ -38,9 +38,9 @@ exports.postDetail = async (req, res) => {
 }
 
 exports.userPostsView = async (req, res) => {
-  const user = await User.findById(req.user.id).populate("posts")
-  console.log
-  res.render("posts/userposts", user)
+  const posts = await Post.find({creatorId: req.user.id})
+  console.log(posts)
+  res.render("posts/userposts", posts)
 }
 //U
 

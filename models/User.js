@@ -19,7 +19,7 @@ const userSchema = new Schema(
     profilePhoto: String,
     posts: [{
       type: Schema.Types.ObjectId,
-      ref: "Posts"
+      ref: "Post"
     }]
   },
   {

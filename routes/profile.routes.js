@@ -6,6 +6,10 @@ const {
   profileView
 } = require("../controllers/profile")
 
+const { userPostsView } = require("../controllers/posts")
+
 router.get("/", enssureLogin("/login"), profileView)
+
+router.get("/misposts", enssureLogin("/login"), userPostsView)
 
 module.exports = router

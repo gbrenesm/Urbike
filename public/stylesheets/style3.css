@@ -1,0 +1,132 @@
+/*rgba(75,78,81,1) - gris
+rgba(255,111,106,1) - rojo*/
+*{
+  font-family:sans-serif;
+}
+/*CSS Menu*/
+body{
+  margin:0;
+  background: rgba(75,78,81,1);
+}
+img {
+  height:50px;
+}
+.menu {
+  background: rgba(255,111,106,1);
+  height: 60px;
+  /*border-bottom: 1px solid rgba(75,78,81,1);*/
+  display:flex;
+  justify-content: space-between;
+}
+.menu a{
+  font-family: impact;
+  color: rgba(75,78,81,1);
+  text-decoration: none;
+  font-size: 20px;
+  flex: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Encabezado*/
+.main-section{
+  height: 600px;
+  width: 100%;
+  background-image: url('../images/bici.JPEG');
+  position: relative;
+  background-size:cover;
+}
+.overlay {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.logos {
+  margin-left:15px;
+}
+.let-white{
+  color:white;
+  margin-bottom:50px;
+}
+.espace {
+    margin-left:25%;
+}
+/*CSS Tarjetas*/
+.d-flex-md{
+  display:flex;
+}
+.col-md-3 {
+  width:35%;
+  padding:1rem;
+  margin:1rem;
+}
+.p-center {
+  text-align: center;
+}
+/*Componentes*/
+.card {
+  background:rgba(255,111,106,1);
+  color:black;
+  padding:1rem;
+  height:100%;
+  transform: scale(1);
+  transition: all 1s;
+  border-radius: 17px;
+}
+.card:hover{
+  /*efecto tarjeta aumentada*/
+  transform: scale(1.1);
+  background: white;
+  color: black;
+  transition: all 0.7s;
+} 
+/*Clases genericas*/
+.hg-light {
+  background: rgba(75,78,81,1);
+}
+section {
+  padding:5%
+}
+.justify-content-center {
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+/*Titulos*/
+.title-2 {
+  display:block;
+  margin-bottom:15px;
+  font-size:4rem;
+  color:white;
+}
+.title-3 {
+  font-size:2rem;
+  color:white;
+}
+.title-4 {
+  font-size:1.3rem;
+}
+/*Pie de pagina*/
+i {
+    height:10px;
+  color:white;
+  } 
+article {
+    position:absolute;
+  margin-top:70px;
+  margin-right:200px;
+  }
+.main-a {
+    background: rgba(75,78,81,1);
+  color:white;
+  border-top: 1px solid rgba(255,111,106,1)
+  }
+.ver-ali {
+  display:flex;
+  justify-content:center;
+  margin-top:100px;
+  
+}

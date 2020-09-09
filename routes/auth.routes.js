@@ -34,7 +34,7 @@ router.get("/auth/facebook", facebookProcess)
 router.get("/auth/facebook/callback", facebookRedirect)
 
 
-//////////////// Facebook /////////////////
+//////////////// Logout /////////////////
 router.get("/logout", logout)
 
 

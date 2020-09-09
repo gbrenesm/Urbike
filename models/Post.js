@@ -12,7 +12,11 @@ const postSchema = new Schema(
     date: { 
       type: Date, 
       default: Date.now },
-    labels: [String]
+    category: String,
+    comments: [{
+      type: Schema.Types.ObjectId,
+      ref: "Comment"
+    }]
   },
   {
     timestamps: true

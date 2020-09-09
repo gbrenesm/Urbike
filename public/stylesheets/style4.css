@@ -1,0 +1,24 @@
+/*rgba(75,78,81,1) - gris
+rgba(255,111,106,1) - rojo*/
+
+html {
+  background-color: rgba(75,78,81,1);
+}
+
+p {
+  color:white;
+}
+
+h1 {
+  text-align: center;
+  color: rgba(255,111,106,1);
+  text-decoration: underline;
+}
+
+h2 {
+  color: white;
+}
+
+.normas {
+  text-align: center;
+}

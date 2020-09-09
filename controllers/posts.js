@@ -53,10 +53,36 @@ exports.userPostsView = async (req, res) => {
   res.render("posts/userposts", { posts })
 }
 
-exports.postAyuda = async (req, res) => {
-  const postayuda = await Post.find({category: "Ayuda"}).populate("creatorId")
-  console.log(postayuda)
-  res.render("categories/ayuda", { postayuda })
+
+/////Categorías//////
+exports.postAyudaView = async (req, res) => {
+  const postsAyuda = await Post.find({category: "Ayuda"}).populate("creatorId")
+  res.render("categories/ayuda", { postsAyuda })
+}
+
+exports.postRodadasView = async (req, res) => {
+  const postsRodada = await Post.find({category: "Rodadas"}).populate("creatorId")
+  res.render("categories/rodadas", { postsRodada })
+}
+
+exports.postCicloviaView = async (req, res) => {
+  const postsCiclovia = await Post.find({category: "Ciclovía"}).populate("creatorId")
+  res.render("categories/ciclovia", { postsCiclovia })
+}
+
+exports.postRecomendacionView = async (req, res) => {
+  const postRecomendacion = await Post.find({category: "Recomendación"}).populate("creatorId")
+  res.render("categories/recomendacion", { postRecomendacion })
+}
+
+exports.postReparacionesView = async (req, res) => {
+  const postsReparaciones = await Post.find({category: "Reparaciones"}).populate("creatorId")
+  res.render("categories/reparaciones", { postsReparaciones })
+}
+
+exports.postOtrosView = async (req, res) => {
+  const postsOtros = await Post.find({category: "Otros"}).populate("creatorId")
+  res.render("categories/otros", { postsOtros })
 }
 
 //D

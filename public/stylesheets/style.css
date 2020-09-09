@@ -11,8 +11,9 @@ html , body {
 }
 
 html {
-  background-color: rgba(58,62,67,1);    
+  background-color: rgba(58,62,67,1);
 }
+
 #animation {
 width:450px;
 }
@@ -649,3 +650,10 @@ z-index:99999;
   border-radius: 15px;
   border: 3px double rgba(75,78,81,1);  
 }
+
+
+/* main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} */

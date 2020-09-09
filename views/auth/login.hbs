@@ -16,27 +16,23 @@
         <div class="contenido-tab">
             <!-- Iniciar Sesion -->
             <div id="iniciar-sesion">
-                <h1>Iniciar Sesión</h1>
+                <h1>Inicia sesión</h1>
                 <form action="/login" method="post">
                     <div class="contenedor-input">
                         <label>
-                            Usuario
+                            Email
                         </label>
-                        <input type="text" required>
+                        <input type="text" name="email" required>
                     </div>
 
                     <div class="contenedor-input">
                         <label>
                             Contraseña
                         </label>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                     </div>
-                    <div class="link">
-                    <p><a href="/auth/google" style="color: white; text-decoration: none;">Accede con Google &nbsp; o</a>  
-                    <a href="/auth/facebook"style="color: white; text-decoration: none;">&nbsp; Regístrate con Facebook</a></p> 
-                    </div>
-                    <!--input type="submit" class="button button-block" value="Iniciar Sesión"-->
-                    <button class="button button-block"><a href="/conctat"></a>Iniciar Sesion</button>
+                    
+                    <button class="button button-block">Inicia sesión</button>
                 </form>
             </div>
         </div>

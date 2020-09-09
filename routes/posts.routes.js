@@ -7,7 +7,12 @@ const { newPostView,
         newPostProcess,
         postsAll, 
         postDetail,
-        postAyuda} = require("../controllers/posts")
+        postRodadasView,
+        postAyudaView,
+        postCicloviaView,
+        postRecomendacionView,
+        postReparacionesView,
+        postOtrosView} = require("../controllers/posts")
 
 const { createComentary } = require("../controllers/comentary")
 
@@ -19,7 +24,14 @@ router.get("/foro/:id", postDetail)
 
 router.post("/foro/:id",  enssureLogin("/login"), createComentary)
 
-router.get("/ayuda", postAyuda)
+
+///////////Categorías////////////////
+router.get("/ayuda", postAyudaView)
+router.get("/rodadas", postRodadasView)
+router.get("/ciclovia", postCicloviaView)
+router.get("/recomendacion", postRecomendacionView)
+router.get("/reparaciones", postReparacionesView)
+router.get("/otros", postOtrosView)
 
 
 module.exports = router

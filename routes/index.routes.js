@@ -6,12 +6,14 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/routes', (req, res, next) => {
-  res.render('routes')
+  res.render('map')
 })
 
 router.get('/data', (req, res, next) => {
   res.render('data')
 })
 
-
+router.get("/inicio", (req, res, next) => {
+  res.render("inicio")
+})
 module.exports = router;

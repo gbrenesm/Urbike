@@ -1,25 +1,12 @@
-const Comentary = require("../models/Comentary")
-
-exports.createNewComentary = (req,res) => res.render("conctat")
+const Comment = require("../models/Comment")
+const Post = require("../models/Post")
 
 exports.createComentary =  async (req, res) => {
   const { content } = req.body
-  await Comentary.create({
+  const comment = await Comment.create({
     content,
-    owner: req.user._id
+    creatorId: req.user._id
   })
-  res.redirect("/views/conctat")
-}
-
-exports.editComentary = async (req, res) => {
-  const { content } = req.body
-  await Comentary.findByIdAndUpdate(req.params.movieId,{
-    content
-  })
-  res.render("/views/conctat")
-}
-
-exports.deleteComentary = async (req, res) => {
-  await Comentary.findByIdAndDelete(req.params.movieId)
-  res.redirect("/views/conctat")
+  await Post.findByIdAndUpdate(req.params.id, {$push: { comments: comment._id }})
+  res.redirect(req.get('referer'))
 }

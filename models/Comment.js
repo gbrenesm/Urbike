@@ -1,9 +1,9 @@
 const { Schema, model } = require("mongoose")
 
-const comentarySchema = new Schema(
+const commentSchema = new Schema(
   {
     content: String, 
-    owner: {
+    creatorId: {
       type: Schema.Types.ObjectId,
       ref: "User"
     }
@@ -13,4 +13,4 @@ const comentarySchema = new Schema(
   }
 )
 
-module.exports = model ("Comentary", comentarySchema)
+module.exports = model ("Comment", commentSchema)

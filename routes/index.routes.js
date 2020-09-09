@@ -13,9 +13,5 @@ router.get('/data', (req, res, next) => {
   res.render('data')
 })
 
-router.get('/conctat', (req, res, next) => {
-  res.render('conctat')
-})
-
 
 module.exports = router;

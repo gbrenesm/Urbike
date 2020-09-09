@@ -1,17 +1,47 @@
-<form action="/login" method="POST" style="padding: 80px 40px 0px 30px"> 
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="text" class="form-control" id="email" name="email">
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" name="password">
-  </div>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/stylesheets/style2.css" />
+</head>
+<body>
+  
+   <!-- Formularios -->
+    <div class="contenedor-formularios">
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+      <!-- Contenido de los Formularios -->
+        <div class="contenido-tab">
+            <!-- Iniciar Sesion -->
+            <div id="iniciar-sesion">
+                <h1>Iniciar Sesión</h1>
+                <form action="#" method="post">
+                    <div class="contenedor-input">
+                        <label>
+                            Usuario
+                        </label>
+                        <input type="text" required>
+                    </div>
 
-</form>
+                    <div class="contenedor-input">
+                        <label>
+                            Contraseña
+                        </label>
+                        <input type="password" required>
+                    </div>
+                    <div class="link">
+                    <p><a href="/auth/google" style="color: white; text-decoration: none;">Accede con Google &nbsp; o</a>  
+                    <a href="/auth/facebook"style="color: white; text-decoration: none;">&nbsp; Regístrate con Facebook</a></p> 
+                    </div>
+                    <input type="submit" class="button button-block" value="Iniciar Sesión">
+                </form>
+            </div>
+        </div>
+    </div>
 
-<p><a href="/auth/google">Accede con Google</a></p>
-<p><a href="/auth/facebook">Regístrate con Facebook</a></p>
+</body>
+</html>
+
+

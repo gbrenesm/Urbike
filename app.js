@@ -12,7 +12,7 @@ const flash        = require("connect-flash")
 
 
 mongoose
-  .connect('mongodb://localhost/urbike', {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true})
   .then(x => {

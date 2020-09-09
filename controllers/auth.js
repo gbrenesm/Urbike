@@ -33,7 +33,7 @@ exports.loginView = (req, res) => {
 }
 
 exports.loginProcess = passport.authenticate("local", {
-  successRedirect: "/profile",
+  successRedirect: "/inicio",
   failureRedirect: "/login",
   failureFlash: true
 })

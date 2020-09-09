@@ -1,12 +1,18 @@
 /*rgba(75,78,81,1) - gris
 rgba(255,111,106,1) - rojo*/
 
-html {
-  background-color: rgba(58,62,67,1);
+:root {
+  --gray: rgba(58,62,67, .8);
+  --red:  rgba(255,111,106, 1)
+}
+body {
+  background-color: var(--gray);
+  font-family: helvetica;
+  margin: 0
 }
 
 .contenedor-formularios {
-  background: rgba(255,111,106,1);
+  background:var(--red);
   padding: 50px;
   max-width: 600px;
   margin: 150px auto;
@@ -64,14 +70,13 @@ input {
   padding: 5px;
   padding-left: 22px;
   padding-right: 22px;
-  font-family: helvetica;
   font-weight: 300;
   font-size: 25px;
   font-style: italic;
   color: white;
-  background-color: rgba(58,62,67,1);;
+  background-color: var(--gray);
   border-radius: 15px;
-  border: 3px double rgba(255,111,106,1); 
+  border: 3px double var(--red); 
 
 }
 
@@ -90,3 +95,120 @@ input {
   font-size: 18px;
   text-align: center;
 }
+
+
+
+/* Foro */
+
+.foro>nav{
+  position: fixed;
+  margin: 5vw;
+}
+
+.foro>nav div:nth-child(1){
+  background-color: var(--red);
+  width: 15vw;
+  padding: 1.5vw;
+  color: white;
+  border-radius: 15px;
+}
+.foro ul{
+  padding-left: 20px;
+}
+.foro li {
+  list-style-type: none;
+  margin: 2vh 0;
+}
+
+.foro ul a,
+.foro nav button a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.foro ul a::after,
+.foro nav button a::after{
+  content: "";
+  position: absolute;
+  bottom: 0 ;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: bottom right;
+  background-color: white;
+}
+
+.foro ul a:hover::after,
+.foro nav button a:hover::after{
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.foro nav button {
+  background-color: var(--red);
+  border-radius: 15px;
+  border: none;
+  margin-top: 2vh;
+  padding: 1vw;
+  font-size: 1em;
+  width: 18vw;
+}
+
+.foro h2{
+  color: white;
+  font-size: 4em;
+  text-align: center;
+}
+
+.foro>section{
+  margin: 0 5vw 0 25vw;
+}
+
+.foro>section>div>div{
+  display: flex;
+  background-color: var(--red);
+  margin: 4vh;
+  border-radius: 15px;
+  width: 100%;
+  height: 35vh;
+}
+
+.foro>section>div>div>div:nth-child(1){
+  width: 28vw;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0;
+}
+
+.foro img {
+  width: 28vw;
+}
+
+.foro>section>div>div>div:nth-child(2){
+  margin-left: 2vw;
+  color: white;
+  position: relative;
+}
+
+.foro section button{
+  position: absolute;
+  bottom: 2vh;
+  left: 10vw;
+  background-color:rgba(75,78,81,1);
+  border: none;
+  border-radius: 15px;
+  width: 18vw;
+  padding: 1vw;
+  font-size: 1em;
+}
+
+.foro section a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+

@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/routes', (req, res, next) => {
-  res.render('routes')
+  res.render('map')
 })
 
 router.get('/data', (req, res, next) => {

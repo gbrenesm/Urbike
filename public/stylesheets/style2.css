@@ -4,7 +4,7 @@ rgba(255,111,106,1) - rojo*/
 :root {
   --gray: rgba(58,62,67, .8);
   --red:  rgba(255,111,106, 1);
-  --blue: rgba(2, 128, 144);
+  --blue: rgba(2, 128, 144, .8);
 }
 
 
@@ -156,20 +156,33 @@ input {
 .foro>nav div:nth-child(2){
   margin: 2vw 0;
 }
-.foro>nav div:nth-child(2)>a{
-  background: var(--gray);
-  padding: 1.5vh 4vw;
-  height:100%;
+
+.foro nav button,
+.botónlindo{
+  background-color: var(--gray);
+  border: none;
+  border-radius: 15px;
+  width: 15vw;
+  padding: 1vw;
+  font-size: 1vw;
   transform: scale(1);
   transition: all 1s;
-  border-radius: 15px;
+  margin-top: 2vh;
 }
 
-.foro>nav div:nth-child(2)>a:hover{
+.foro nav a,
+.botónlindo a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.foro nav button:hover,
+.botónlindo:hover{
   transform: scale(1.1);
   background: var(--blue);
   transition: all 0.7s;
-} 
+}
 
 .foro ul a,
 .foro>nav div:nth-child(2)>a{
@@ -216,7 +229,6 @@ input {
   border-radius: 15px;
   width: 100%;
   height: 35vh;
- 
 }
 
 .foro>section>div>div>div:nth-child(1){
@@ -240,12 +252,14 @@ input {
   position: absolute;
   bottom: 2vh;
   left: 10vw;
-  background-color:rgba(75,78,81,1);
+  background-color:  rgb(2, 128, 144);
   border: none;
   border-radius: 15px;
   width: 18vw;
   padding: 1vw;
   font-size: 1vw;
+  transform: scale(1);
+  transition: all 1s;
 }
 
 .foro section a{
@@ -254,4 +268,49 @@ input {
   position: relative;
 }
 
+.foro section button:hover{
+  transform: scale(1.1);
+  background: var(--red);
+  transition: all 0.7s;
+}
 
+
+/* Detalles de posts */
+
+.detalles{
+  background-color: white;
+  display: flex;
+  padding: 15vh 3vw;
+  color: white;
+}
+
+.detalles>div:nth-child(1){
+  width: 45%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.detalles img {
+  width: 100%;
+}
+
+.detalles>div:nth-child(2){
+  margin-left: 2vw;
+  width: 55%;
+}
+
+.detalles>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
+  text-align: right;
+  margin-right: 2vw;
+  
+}
+
+.detalles>div:nth-child(2)>div:nth-child(1){
+  background-color: var(--blue);
+  padding: 0 2vw 2vh;
+}
+
+.detalles>div:nth-child(2)>div:nth-child(2),
+.detalles>div:nth-child(2)>div:nth-child(3) {
+  margin: 1vh 2vw;
+}

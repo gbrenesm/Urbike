@@ -3,8 +3,11 @@ rgba(255,111,106,1) - rojo*/
 
 :root {
   --gray: rgba(58,62,67, .8);
-  --red:  rgba(255,111,106, 1)
+  --red:  rgba(255,111,106, 1);
+  --blue: rgba(2, 128, 144);
 }
+
+
 body {
   background-color: var(--gray);
   font-family: helvetica;
@@ -17,7 +20,6 @@ body {
   max-width: 600px;
   margin: 150px auto;
   border-radius: 5px;
- 
 }
 
 h1 {
@@ -28,8 +30,6 @@ h1 {
 }
 
 label {
-  
-  
   left: 13px;
   color: white;
   transition: all 0.25s ease;
@@ -98,37 +98,87 @@ input {
 
 
 
-/* Foro */
+/*////////////////////////// Foro //////////////////*/
+
+/* Navbar */
+.menu>nav {
+  background: var(--red);
+  height: 60px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.menu>nav>a{
+  font-family: impact;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vw;
+  flex: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu{
+  position: fixed;
+  width: 100%;
+  margin: 0;
+}
+/* Categorías */
+
+.foro{
+  padding: 60px;
+  background-color: white;
+}
 
 .foro>nav{
   position: fixed;
-  margin: 5vw;
+  margin-top: 5vh;
 }
 
 .foro>nav div:nth-child(1){
   background-color: var(--red);
-  width: 15vw;
-  padding: 1.5vw;
+  width: 13vw;
+  padding: 1vh 1.3vw;
   color: white;
   border-radius: 15px;
 }
+
 .foro ul{
   padding-left: 20px;
 }
+
 .foro li {
   list-style-type: none;
   margin: 2vh 0;
 }
 
+.foro>nav div:nth-child(2){
+  margin: 2vw 0;
+}
+.foro>nav div:nth-child(2)>a{
+  background: var(--gray);
+  padding: 1.5vh 4vw;
+  height:100%;
+  transform: scale(1);
+  transition: all 1s;
+  border-radius: 15px;
+}
+
+.foro>nav div:nth-child(2)>a:hover{
+  transform: scale(1.1);
+  background: var(--blue);
+  transition: all 0.7s;
+} 
+
 .foro ul a,
-.foro nav button a{
+.foro>nav div:nth-child(2)>a{
   color: white;
   text-decoration: none;
   position: relative;
 }
 
-.foro ul a::after,
-.foro nav button a::after{
+.foro ul a::after{
   content: "";
   position: absolute;
   bottom: 0 ;
@@ -141,39 +191,32 @@ input {
   background-color: white;
 }
 
-.foro ul a:hover::after,
-.foro nav button a:hover::after{
+.foro ul a:hover::after{
   transform-origin: bottom left;
   transform: scaleX(1);
 }
 
-.foro nav button {
-  background-color: var(--red);
-  border-radius: 15px;
-  border: none;
-  margin-top: 2vh;
-  padding: 1vw;
-  font-size: 1em;
-  width: 18vw;
-}
+
+/* Entradas */
 
 .foro h2{
-  color: white;
-  font-size: 4em;
+  color: var(--gray);
+  font-size: 5vw;
   text-align: center;
 }
 
 .foro>section{
-  margin: 0 5vw 0 25vw;
+  margin: 0 5vw 0 20vw;
 }
 
 .foro>section>div>div{
   display: flex;
-  background-color: var(--red);
+  background-color: var(--blue);
   margin: 4vh;
   border-radius: 15px;
   width: 100%;
   height: 35vh;
+ 
 }
 
 .foro>section>div>div>div:nth-child(1){
@@ -202,7 +245,7 @@ input {
   border-radius: 15px;
   width: 18vw;
   padding: 1vw;
-  font-size: 1em;
+  font-size: 1vw;
 }
 
 .foro section a{

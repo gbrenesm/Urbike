@@ -8,17 +8,19 @@ body{
   margin:0;
   background: rgba(75,78,81,1);
 }
+
 img {
   height:50px;
 }
-.menu {
+
+nav {
   background: rgba(255,111,106,1);
   height: 60px;
   /*border-bottom: 1px solid rgba(75,78,81,1);*/
   display:flex;
   justify-content: space-between;
 }
-.menu a{
+nav a{
   font-family: impact;
   color: rgba(75,78,81,1);
   text-decoration: none;
@@ -28,6 +30,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+
 /*Encabezado*/
 .main-section{
   height: 600px;

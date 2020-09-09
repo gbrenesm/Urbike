@@ -1,11 +1,13 @@
 <h2>Tus entradas</h2>
+
 {{#each posts}}
   <div>
-    <h4>{{posts.title}}</h4>
-    <p>{{posts.content}}</p>
-    <img src="{{posts.photo}}" alt="{{posts.title}}">
-    <p>{{posts.date}}</p>
+    <h4>{{title}}</h4>
+    <p>{{content}}</p>
+    <img src="{{photo}}" alt="{{title}}">
+    <p>{{date}}</p>
   </div>
   {{else}}
   <p class="empty">Aún no tienes posts</p>
 {{/each}}
+  

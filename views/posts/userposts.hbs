@@ -4,10 +4,13 @@
   <div>
     <h4>{{title}}</h4>
     <p>{{content}}</p>
-    <img src="{{photo}}" alt="{{title}}">
+    {{!-- <img src="{{photo}}" alt="{{title}}"> --}}
     <p>{{date}}</p>
   </div>
+  <a href="/foro/{{_id}}"><button>Detalles</button></a>
+  <a href="/profile/misposts/{{_id}}"><button>Elimina la entrada</button></a>
   {{else}}
   <p class="empty">Aún no tienes posts</p>
 {{/each}}
-  
+<br>
+

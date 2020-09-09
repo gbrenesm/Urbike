@@ -13,8 +13,5 @@ router.get('/data', (req, res, next) => {
   res.render('data')
 })
 
-router.get('/inicio', (req, res, next) => {
-  res.render('inicio')
-})
 
 module.exports = router;

@@ -7,6 +7,20 @@
   </div>
 </div>
 
+<div>
+  {{#each posts}}
+  <div>
+    <p>{{creatorId.username}}</p>
+    <h3>{{title}}</h3>
+    <p>{{content}}</p>
+    {{!-- <img src="{{photo}}" alt=""> --}}
+    <a href="/foro/{{_id}}"><button>Detalles</button></a>
+  </div>
+  <br>
+  {{/each}}
+</div>
+
+
 
 
 

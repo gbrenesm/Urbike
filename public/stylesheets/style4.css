@@ -14,26 +14,42 @@ h1 {
   text-align: center;
   color: rgba(255,111,106,1);
   text-decoration: underline;
+  padding-top: 20px;
 }
 
 h2 {
   color: white;
 }
 
-.img1 {
-width: 50%;
-padding-top: 20px;
-padding-left: 15px;
-}
-
-.bici_derc {
-  width:35%;
-  height: 300px;
-  padding: 35px 85px 0px 0px;
-}
-
 .contenido1 {
   display: flex;
   justify-content: space-between;
 }
+.texto1 {
+width: 50%;
+padding-top: 95px;
+padding-left: 25px;
+}
+
+.bici1 {
+  width:35%;
+  height: 300px;
+  padding:100px 85px 45px 0px;
+}
+
+.texto2 {
+  width: 50%;
+  padding-top: 30px;
+  padding-left: 15px;
+}
+  
+.bici2 {
+  width:45%;
+  height: 400px;
+  padding: 45px 0px 45px 15px;
+}
+
+
+
+
 

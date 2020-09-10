@@ -620,27 +620,11 @@ z-index:99999;
 
 }
 
-.b_registrate {
-  text-decoration: none;
-  padding: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 15px;
-  font-family: helvetica;
-  font-weight: 300;
-  font-size: 25px;
-  font-style: italic;
-  color: rgba(75,78,81,1);
-  background-color:  rgba(255,111,106,1);
-  border-radius: 15px;
-  border: 3px double rgba(75,78,81,1);
-}
-
 .b_accede {
   text-decoration: none;
   padding: 3px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 32px;
+  padding-right: 32px;
   font-family: helvetica;
   font-weight: 300;
   font-size: 25px;

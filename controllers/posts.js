@@ -24,7 +24,7 @@ exports.newPostProcess = async (req, res) => {
     })
   }
   await User.findByIdAndUpdate(req.user.id, {$push: {posts: post._id}})
-  res.redirect("/")
+  res.redirect("/foro")
 }
 
 //R

@@ -1,12 +1,46 @@
-<div>
-  {{#each postayuda}}
-  <div>
-    <p>{{creatorId.username}}</p>
-    <h3>{{title}}</h3>
-    <p>{{content}}</p>
-    {{!-- <img src="{{photo}}" alt=""> --}}
-    {{!-- <a href="/foro/{{_id}}"><button>Detalles</button></a> --}}
-  </div>
-  <br>
-  {{/each}}
+<link rel="stylesheet" href="/stylesheets/style2.css"/>
+<div class="menu">
+  <nav >
+    <a href="/inicio">Urbike</a>
+    <a href="/data">Primera rodada</a>
+    <a href="/routes">Mapa</a>
+    <a href="/profile">Perfil</a>
+  </nav>
 </div>
+
+<main class="foro">
+  <nav>
+    <div>
+      <h3>Categorías</h3>
+        <ul>
+          <li><a href="/ayuda">Ayuda</a></li>
+          <li><a href="/ciclovia">Ciclovía</a></li>
+          <li><a href="/recomendacion">Recomendación</a></li>
+          <li><a href="/reparaciones">Reparaciones</a></li>
+          <li><a href="/rodadas">Rodadas</a></li>
+          <li><a href="/otros">Otros</a></li>
+        </ul>
+    </div>
+      <button><a href="/newpost">Crea una entrada</a></button>
+  </nav>
+  <section>
+    <h2>Urbike foro</h2>
+    <h3>Comparte tus experencias, pregunta tus dudas o ayuda a otros para que empiecen a rodar por la ciudad.</h3>
+    <div>
+      {{#each postsAyuda}}
+        <div>
+          <div>
+            <img src="{{photo}}" alt="{{title}}">
+          </div>
+          <div>
+            <h3>{{title}}</h3>
+            <p>{{content}}</p>
+            <button id="forobtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
+          </div>
+        </div>
+        {{else}}
+        <p class="empty">Aún no hay entradas en esta categoría</p>
+      {{/each}}
+    </div>
+  </section>
+</main>

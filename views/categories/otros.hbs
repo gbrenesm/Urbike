@@ -27,7 +27,7 @@
     <h2>Urbike foro</h2>
     <h3>Comparte tus experencias, pregunta tus dudas o ayuda a otros para que empiecen a rodar por la ciudad.</h3>
     <div>
-      {{#each posts}}
+      {{#each postsOtros}}
         <div>
           <div>
             <img src="{{photo}}" alt="{{title}}">
@@ -38,6 +38,8 @@
             <button id="forobtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
           </div>
         </div>
+        {{else}}
+        <p class="empty">Aún no hay entradas en esta categoría</p>
       {{/each}}
     </div>
   </section>

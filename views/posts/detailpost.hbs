@@ -12,12 +12,17 @@
 <main class="detalles">
   <div>
     <img src="{{photo}}" alt="{{title}}">
+    <button class="botónlindo"><a href="/foro">Regresa al foro</a></button>
   </div>
   <div>
     <div>
       <div>
-        <img id="profilepic" src="{{creatorId.profilePhoto}}" alt="">
-        <h4>{{creatorId.username}}</h4>
+        <div>
+          <p>{{creatorId.username}}</p>
+        </div>
+        <div>
+          <img id="profilepic" src="{{creatorId.profilePhoto}}" alt="">
+        </div>
       </div>
       <div>
         <h3>{{title}}</h3>
@@ -25,27 +30,23 @@
       </div>
     </div>
     <div>
-      <h4>Comentarios</h4>
-      {{#each comments}}
-        <div>
+      <div>
+        <h4>Comentarios</h4>
+        {{#each comments}}
           <div>
-            <p><b>Comentario de {{creatorId.username}}</b></p>
-            <p>{{content}}</p>
+            <div>
+              <p><b>{{creatorId.username}}: </b></p>
+              <p>{{content}}</p>
+            </div>
           </div>
-        </div>
-      {{/each}}
+          {{else}}
+            <p class="empty">Aún no hay comentarios en esta entrada</p>
+        {{/each}}
+      </div>
+      <form action="/foro/{{_id}}" method="POST">
+        <textarea name="content" id="content" rows="2" placeholder="Escribe un comentario"></textarea>
+        <button type="submit">Envía</button>
+      </form>
     </div>
   </div>
-</main>
-<button class="botónlindo"><a href="/foro">Regresa al foro</a></button>
-  
-
-<h2>Crea un nuevo comentario</h2>
-<form action="/foro/{{_id}}" method="POST">
-  <div class="form-group">
-    <label for="content">Comentario</label>
-    <textarea class="form-control" id="content" name="content" rows="2"></textarea>
-  </div>
-  <button type="submit">Envía</button>
-</form>
 </main>

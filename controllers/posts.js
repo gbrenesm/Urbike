@@ -2,7 +2,10 @@ const Post = require("../models/Post")
 const User = require("../models/User")
 
 //C
-exports.newPostView = (req, res) => res.render("posts/newpost")
+exports.newPostView = async (req, res) => {
+  const user = await User.findById(req.user.id)
+  res.render("posts/newpost", { user })
+}
 
 exports.newPostProcess = async (req, res) => {
   const { title, content, category } = req.body //TODO labels

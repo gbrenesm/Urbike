@@ -271,19 +271,16 @@ input {
   position: relative;
   width: 50%;
 }
+
 .forocontent{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 #forobtn{
-  /* position: absolute;
-  bottom: 2vh;
-  left: 10vw; */
   width: 18vw;
-  margin: 2vw;
+  margin: 2vw 9vw;
 }
 .foro section button{
   background-color:  rgb(2, 128, 144);

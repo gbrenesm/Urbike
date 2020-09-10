@@ -5,7 +5,6 @@ exports.profileView = (req, res) => {
 }
 
 exports.configUserView = (req, res) => {
-  console.log(req.user)
   res.render("profile/configuration")
 }
 

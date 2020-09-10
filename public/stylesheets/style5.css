@@ -1,5 +1,10 @@
 /*rgba(75,78,81,1) - gris
-rgba(255,111,106,1) - rojo*/
+rgba(255,111,106,1) - rojo
+font-family: 'Gayathri', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oxygen', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@700&family=Montserrat:wght@400;500;700&family=Oxygen:wght@300;700&display=swap');
+
 
 body {
   margin: 0px;
@@ -10,9 +15,7 @@ body {
 h1 {
   color: #006400;
   text-align: center;
-  padding: 20px;
-  text-decoration: underline;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 65px;
   margin: 0;
 

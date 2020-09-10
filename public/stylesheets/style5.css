@@ -3,11 +3,9 @@ rgba(255,111,106,1) - rojo*/
 
 body {
   margin: 0px;
-}
-
-html {
   background-color: #DCDCDC;
 }
+
 
 h1 {
   color: #006400;
@@ -15,6 +13,9 @@ h1 {
   padding: 20px;
   text-decoration: underline;
   font-family: 'Times New Roman', Times, serif;
+  padding: 65px;
+  margin: 0;
+
 }
 
 nav {
@@ -25,7 +26,9 @@ nav {
   display:flex;
   justify-content: space-between;
   font-family: 'Times New Roman', Times, serif;
+  position: fixed;
 }
+
 nav a{
   font-family: impact;
   color: #DCDCDC;
@@ -35,4 +38,8 @@ nav a{
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+nav>:first-child{
+  font-size: 1.9vw;
 }

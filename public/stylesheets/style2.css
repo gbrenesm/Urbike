@@ -1,5 +1,12 @@
 /*rgba(75,78,81,1) - gris
-rgba(255,111,106,1) - rojo*/
+rgba(255,111,106,1) - rojo
+font-family: 'Gayathri', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oxygen', sans-serif;
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@700&family=Montserrat:wght@400;500;700&family=Oxygen:wght@300;700&display=swap');
 
 :root {
   --gray: rgba(58,62,67, .8);
@@ -10,8 +17,9 @@ rgba(255,111,106,1) - rojo*/
 
 body {
   background-color: var(--gray);
-  font-family: 'Times New Roman', Times, serif;
-  margin: 0
+  font-family: 'Oxygen', sans-serif;
+  margin: 0;
+  line-height: 20px;
 }
 
 .contenedor-formularios {
@@ -25,9 +33,8 @@ body {
 h1 {
   text-align: center;
   color: white;
-  font-weight: bold;
   margin: 0 0 40px;
-  font-family: 'Times New Roman', Times, serif;
+  font: 'Times New Roman', Times, serif bold;
 }
 
 label {
@@ -103,9 +110,6 @@ input {
 
 /* Navbar */
 
-.menu{
-  z-index: 20;
-}
 .menu>nav {
   background: var(--red);
   height: 60px;
@@ -118,10 +122,9 @@ input {
 }
 
 .menu>nav>a{
-  font-family: impact;
-  color: white;
+  font: 1.5vw impact ;
+  color: var(--gray);
   text-decoration: none;
-  font-size: 1.5vw;
   flex: 1;
   display:flex;
   justify-content: center;
@@ -132,7 +135,9 @@ input {
   position: fixed;
   width: 100%;
   margin: 0;
+  z-index: 20;
 }
+
 /* Categorías */
 
 .foro{
@@ -220,7 +225,7 @@ input {
 
 .foro h2{
   color: var(--gray);
-  font-size: 5vw;
+  font: 5vw 'Montserrat', sans-serif;
   text-align: center;
   margin: 4vh 2vw 1vw;
   width: 100%;
@@ -231,6 +236,7 @@ input {
   text-align: center;
   margin: 2vw;
   line-height: 2vw;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .foro>section{
@@ -297,7 +303,7 @@ input {
 .foro>section p,
 .detalles p{
   text-align: justify;
-  line-height: 22px;
+  line-height: 24px;
   font-size: 18px;
 }
 
@@ -394,23 +400,24 @@ input {
 }
 
 .foro h3{
-  font-size: 1.3em;
+  font: 1.3em 'Montserrat', sans-serif bold;
   margin: 2vw 0;
+  
 }
 
 .detalles h3{
-  font-size: 22px;
+  font: 22px 'Montserrat', sans-serif;
 
 }
 
 h4 {
   margin: 0;
-  font-size: 22px;
+  font: 22px 'Montserrat', sans-serif;
 }
 
 .detalles form textarea{
   width: 99%;
-  font: .9em Helvetica, sans-serif;
+  font: .9em 'Oxygen', sans-serif;
   padding: 8px;
 }
 

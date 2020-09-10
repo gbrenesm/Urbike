@@ -1,46 +1,79 @@
 /*rgba(75,78,81,1) - gris
-rgba(255,111,106,1) - rojo*/
+rgba(255,111,106,1) - rojo
+font-family: 'Gayathri', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oxygen', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@700&family=Montserrat:wght@400;500;700&family=Oxygen:wght@300;700&display=swap');
+
+:root {
+  --gray: rgba(58,62,67, .8);
+  --red:  rgba(255,111,106, 1);
+  --blue: rgba(2, 128, 144, .8);
+}
 
 body {
   margin: 0;
-}
-
-html {
   background-color: rgba(75,78,81,1);
+  font-family: 'Oxygen', sans-serif;
 }
 
-nav {
-  background: rgba(255,111,106,1);
+
+.menu>nav {
   height: 60px;
-  width: 100%;
-  /*border-bottom: 1px solid rgba(75,78,81,1);*/
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  font-family: 'Times New Roman', Times, serif;
 }
-nav a{
+
+.menu nav>:first-child{
+  font-size: 1.9vw;
+}
+
+.menu>nav>a{
   font-family: impact;
-  color: rgba(75,78,81,1);
+  color: var(--gray);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5vw;
   flex: 1;
   display:flex;
   justify-content: center;
   align-items: center;
 }
 
-p {
+.menu{
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  z-index: 20;
+  background: var(--red)
+}
+
+
+main>div:first-child{
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  padding: 70px 0 20px 0;
+}
+
+main>div:first-child p{
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+p, li {
   color:white;
   font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 h1 {
   text-align: center;
   color: rgba(255,111,106,1);
-  text-decoration: underline;
   padding-top: 20px;
-  font-family: 'Times New Roman', Times, serif;
+  font: 5vw 'Montserrat', sans-serif;
+  margin: 0;
 }
 
 h2 {
@@ -49,18 +82,24 @@ h2 {
 
 .contenido1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
 .texto1 {
 width: 50%;
-padding-top: 95px;
-padding-left: 25px;
+padding: 4vh;
 }
 
 .bici1 {
-  width:35%;
-  height: 300px;
+  width: 40%;
+  height: auto;
   padding:100px 85px 45px 0px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .texto2 {

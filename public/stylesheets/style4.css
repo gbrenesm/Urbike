@@ -1,6 +1,12 @@
 /*rgba(75,78,81,1) - gris
 rgba(255,111,106,1) - rojo*/
 
+:root {
+  --gray: rgba(58,62,67, .8);
+  --red:  rgba(255,111,106, 1);
+  --blue: rgba(2, 128, 144, .8);
+}
+
 body {
   margin: 0;
 }
@@ -9,24 +15,37 @@ html {
   background-color: rgba(75,78,81,1);
 }
 
-nav {
-  background: rgba(255,111,106,1);
+.menu>nav {
   height: 60px;
-  width: 100%;
-  /*border-bottom: 1px solid rgba(75,78,81,1);*/
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  font-family: 'Times New Roman', Times, serif;
 }
-nav a{
+
+.menu nav>:first-child{
+  font-size: 1.9vw;
+}
+
+.menu>nav>a{
   font-family: impact;
-  color: rgba(75,78,81,1);
+  color: var(--gray);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5vw;
   flex: 1;
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu{
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  z-index: 20;
+  background: var(--red)
+}
+
+main{
+  padding: 60px;
 }
 
 p {

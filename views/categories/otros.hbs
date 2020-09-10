@@ -5,7 +5,12 @@
     <a href="/data">Primera rodada</a>
     <a href="/foro">Foro</a>
     <a href="/routes">Mapa</a>
-    <a href="/profile">Perfil</a>
+    {{#if user}}
+      <a href="/profile">Perfil</a>
+    {{else }}
+    <a href="/signup">Regístrate</a>
+    <a href="/login">Entra</a>
+    {{/if }}
   </nav>
 </div>
 

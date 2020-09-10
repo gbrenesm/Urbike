@@ -31,10 +31,12 @@ exports.newPostProcess = async (req, res) => {
 
 exports.postsAll = async (req, res) => {
   const posts = await Post.find().populate("creatorId")
-  res.render("posts/allposts", { posts })
+  const user = await User.findById(req.user)
+  res.render("posts/allposts", { posts, user})
 }
 
 exports.postDetail = async (req, res) => {
+  const user = await User.findById(req.user)
   const post = await Post.findById(req.params.id)
     .populate("creatorId")
     .populate("comments")
@@ -45,7 +47,7 @@ exports.postDetail = async (req, res) => {
         model: "User"
       }
     })
-  res.render("posts/detailpost", post)
+  res.render("posts/detailpost", post, user)
 }
 
 exports.userPostsView = async (req, res) => {
@@ -57,32 +59,38 @@ exports.userPostsView = async (req, res) => {
 /////Categorías//////
 exports.postAyudaView = async (req, res) => {
   const postsAyuda = await Post.find({category: "Ayuda"}).populate("creatorId")
-  res.render("categories/ayuda", { postsAyuda })
+  const user = await User.findById(req.user)
+  res.render("categories/ayuda", { postsAyuda, user })
 }
 
 exports.postRodadasView = async (req, res) => {
   const postsRodada = await Post.find({category: "Rodadas"}).populate("creatorId")
-  res.render("categories/rodadas", { postsRodada })
+  const user = await User.findById(req.user)
+  res.render("categories/rodadas", { postsRodada, user })
 }
 
 exports.postCicloviaView = async (req, res) => {
   const postsCiclovia = await Post.find({category: "Ciclovía"}).populate("creatorId")
-  res.render("categories/ciclovia", { postsCiclovia })
+  const user = await User.findById(req.user)
+  res.render("categories/ciclovia", { postsCiclovia, user })
 }
 
 exports.postRecomendacionView = async (req, res) => {
   const postRecomendacion = await Post.find({category: "Recomendación"}).populate("creatorId")
-  res.render("categories/recomendacion", { postRecomendacion })
+  const user = await User.findById(req.user)
+  res.render("categories/recomendacion", { postRecomendacion, user })
 }
 
 exports.postReparacionesView = async (req, res) => {
   const postsReparaciones = await Post.find({category: "Reparaciones"}).populate("creatorId")
-  res.render("categories/reparaciones", { postsReparaciones })
+  const user = await User.findById(req.user)
+  res.render("categories/reparaciones", { postsReparaciones, user })
 }
 
 exports.postOtrosView = async (req, res) => {
   const postsOtros = await Post.find({category: "Otros"}).populate("creatorId")
-  res.render("categories/otros", { postsOtros })
+  const user = await User.findById(req.user)
+  res.render("categories/otros", { postsOtros, user })
 }
 
 //D

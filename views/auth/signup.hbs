@@ -17,6 +17,9 @@
             <!-- Iniciar Sesion -->
             <div id="iniciar-sesion">
                 <h1>Regístrate</h1>
+                    {{#if error}}
+                        <div class="error-message">{{error}}</div>
+                    {{/if}}
                 <form action="/signup" method="POST">
                     <div class="contenedor-input">
                         <label>

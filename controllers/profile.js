@@ -5,20 +5,21 @@ exports.profileView = (req, res) => {
 }
 
 exports.configUserView = (req, res) => {
-  res.render("profile/config", req.user)
+  console.log(req.user)
+  res.render("profile/configuration")
 }
 
 exports.configUserProcess = async (req, res) => {
   const { username } = req.body
   let user
   if(req.file){
-    post = await User.findByIdAndUpdate(req.user.id, {
+    user = await User.findByIdAndUpdate(req.user.id, {
       profilePhoto: req.file.path,
       username,
       password
     })
   } else {
-    post = await User.findByIdAndUpdate(req.user.id, {
+    user = await User.findByIdAndUpdate(req.user.id, {
       username,
       password
     })

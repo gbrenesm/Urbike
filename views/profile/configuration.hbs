@@ -1,0 +1,32 @@
+<div class="menu">
+  <nav >
+    <a href="/inicio">Urbike</a>
+    <a href="/data">Primera rodada</a>
+    <a href="/routes">Mapa</a>
+    <a href="/profile">Perfil</a>
+  </nav>
+</div>
+
+<div class="contenedor-formulario">
+  <form action="/newpost" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="username" class="titulo">Nombre de usuario</label>
+      <input type="text" class="form-control" id="username" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="titulo">Contraseña</label>
+      <input type="textarea" class="form-control" id="password" name="password">
+    </div>
+  
+    <div class="custom-file">
+      <input type="file" name="image">
+      <label class="custom-file-label" for="customFile">Selecciona un archivo</label>
+    </div>
+    <div>
+      <button type="submit">Guarda tus cambios</button>
+    </div>
+
+  </form>
+</div>
+<link rel="stylesheet" href="/stylesheets/style6.css"/>

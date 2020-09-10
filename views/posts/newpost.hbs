@@ -1,27 +1,42 @@
-<form action="/newpost" method="POST" enctype="multipart/form-data">
-  <div class="form-group">
-    <label for="title">Título</label>
-    <input type="text" class="form-control" id="title" name="title">
-  </div>
-
-  <div class="form-group">
-    <label for="content">Contenido</label>
-    <input type="textarea" class="form-control" id="content" name="content">
-  </div>
-  
-  <div class="custom-file">
-    <input type="file" name="image">
-    <label class="custom-file-label" for="customFile">Selecciona un archivo</label>
+<div class="menu">
+  <nav >
+    <a href="/inicio">Urbike</a>
+    <a href="/data">Primera rodada</a>
+    <a href="/routes">Mapa</a>
+    <a href="/profile">Perfil</a>
+  </nav>
 </div>
-<select  name="category">
-  <option selected>Categoría</option>
-  <option>Ayuda</option>
-  <option>Ciclovía</option>
-  <option>Recomendación</option>
-  <option>Reparaciones</option>
-  <option>Rodadas</option>
-  <option>Otros</option>
-</select>
 
-<button type="submit">Crear post</button>
-</form>
+<div class="contenedor-formulario">
+  <form action="/newpost" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="title" class="titulo">Título</label>
+      <input type="text" class="form-control" id="title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="content" class="titulo">Contenido</label>
+      <input type="textarea" class="form-control" id="content" name="content">
+    </div>
+  
+    <div class="custom-file">
+      <input type="file" name="image">
+      <label class="custom-file-label" for="customFile">Selecciona un archivo</label>
+    </div>
+    <select  name="category">
+      <option selected>Categoría</option>
+      <option>Ayuda</option>
+      <option>Ciclovía</option>
+      <option>Recomendación</option>
+      <option>Reparaciones</option>
+      <option>Rodadas</option>
+      <option>Otros</option>
+    </select>
+
+    <div>
+      <button type="submit">Crear post</button>
+    </div>
+
+  </form>
+</div>
+<link rel="stylesheet" href="/stylesheets/style6.css"/>

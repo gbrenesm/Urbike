@@ -36,7 +36,6 @@ exports.postsAll = async (req, res) => {
 }
 
 exports.postDetail = async (req, res) => {
-  const user = await User.findById(req.user)
   const post = await Post.findById(req.params.id)
     .populate("creatorId")
     .populate("comments")
@@ -47,7 +46,7 @@ exports.postDetail = async (req, res) => {
         model: "User"
       }
     })
-  res.render("posts/detailpost", post, user)
+  res.render("posts/detailpost", post)
 }
 
 exports.userPostsView = async (req, res) => {

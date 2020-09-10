@@ -13,7 +13,7 @@ router.get("/", enssureLogin("/login"), profileView)
 
 router.get("/misposts", enssureLogin("/login"), userPostsView)
 
-router.get("/misposts/:id", enssureLogin("/login"), deletePost)
+router.get("/:id", enssureLogin("/login"), deletePost)
 
 router.get("/config", enssureLogin("/login"), configUserView)
 router.post("/config", enssureLogin("/login"), configUserProcess)

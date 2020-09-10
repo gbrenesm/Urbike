@@ -3,7 +3,7 @@ const router = express.Router()
 const { enssureLogin } = require("../middleware")
 
 const {
-  profileView
+  profileView, configUserView, configUserProcess
 } = require("../controllers/profile")
 
 const { userPostsView,
@@ -14,5 +14,8 @@ router.get("/", enssureLogin("/login"), profileView)
 router.get("/misposts", enssureLogin("/login"), userPostsView)
 
 router.get("/misposts/:id", enssureLogin("/login"), deletePost)
+
+router.get("/config", enssureLogin("/login"), configUserView)
+router.post("/config", enssureLogin("/login"), configUserProcess)
 
 module.exports = router

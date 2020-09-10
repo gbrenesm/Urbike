@@ -1,16 +1,45 @@
-<h2>Tus entradas</h2>
+<link rel="stylesheet" href="/stylesheets/style2.css"/>
+<div class="menu">
+  <nav >
+    <a href="/inicio">Urbike</a>
+    <a href="/data">Primera rodada</a>
+    <a href="/foro">Foro</a>
+    <a href="/routes">Mapa</a>
+  </nav>
+</div>
+  
+<main class="foro">
+  <nav>
+      <button><a href="/newpost">Crea una nueva entrada</a></button>
+      <br>
+      <button><a href="/profile">Regresa a tu perfil</a></button>
+  </nav>
+  <section>
+    <h3>Tus entradas</h3>
+    <div>
+      {{#each posts}}
+        <div>
+          <div>
+            <img src="{{photo}}" alt="{{title}}">
+          </div>
+          <div>
+            <h3>{{title}}</h3>
+            <p>{{content}}</p>
+            <button class="userpostsbtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
+            <button class="userpostsbtn"><a href="/misposts/{{_id}}">Elimina la entrada</a></button>
+          </div>
+        </div>
+        {{else}}
+        <p class="empty">Aún no tienes posts</p>
+      {{/each}}
+    </div>
+  </section>
+</main>
 
-{{#each posts}}
-  <div>
-    <h4>{{title}}</h4>
-    <p>{{content}}</p>
-    {{!-- <img src="{{photo}}" alt="{{title}}"> --}}
-    <p>{{date}}</p>
-  </div>
-  <a href="/foro/{{_id}}"><button>Detalles</button></a>
-  <a href="/profile/misposts/{{_id}}"><button>Elimina la entrada</button></a>
-  {{else}}
-  <p class="empty">Aún no tienes posts</p>
-{{/each}}
-<br>
+
+
+
+
+
+
 

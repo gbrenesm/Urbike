@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/stylesheets/style2.css"/>
 <div class="menu">
   <nav >
-    <a href="/inicio">Inicio</a>
+    <a href="/inicio">Urbike</a>
     <a href="/data">Primera rodada</a>
     <a href="/routes">Mapa</a>
     <a href="/profile">Perfil</a>
@@ -25,6 +25,7 @@
   </nav>
   <section>
     <h2>Urbike foro</h2>
+    <h3>Comparte tus experencias, pregunta tus dudas o ayuda a otros para que empiecen a rodar por la ciudad.</h3>
     <div>
       {{#each posts}}
         <div>
@@ -34,16 +35,10 @@
           <div>
             <h3>{{title}}</h3>
             <p>{{content}}</p>
-            <button><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
+            <button id="forobtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
           </div>
         </div>
       {{/each}}
     </div>
   </section>
 </main>
-
-
-
-
-
-

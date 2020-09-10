@@ -40,9 +40,13 @@
             <img src="{{photo}}" alt="{{title}}">
           </div>
           <div>
-            <h3>{{title}}</h3>
-            <p>{{content}}</p>
-            <button id="forobtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
+            <div class="forocontent">
+              <h3>{{title}}</h3>
+              <p>{{content}}</p>
+            </div>
+            <div>
+              <button id="forobtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
+            </div>
           </div>
         </div>
       {{/each}}

@@ -10,7 +10,7 @@ rgba(255,111,106,1) - rojo*/
 
 body {
   background-color: var(--gray);
-  font-family: helvetica;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0
 }
 
@@ -27,6 +27,7 @@ h1 {
   color: white;
   font-weight: bold;
   margin: 0 0 40px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 label {
@@ -53,7 +54,7 @@ input {
   border-top: none;
   border-left: none;
   border-right: none;
-  color: rgba(255,111,106,1);
+  color: white;
   border-radius: 0;
   transition: all 0.5s ease;
   border-radius: 5px;

@@ -19,6 +19,7 @@ nav {
   /*border-bottom: 1px solid rgba(75,78,81,1);*/
   display:flex;
   justify-content: space-between;
+  font-family: 'Times New Roman', Times, serif;
 }
 nav a{
   font-family: impact;
@@ -52,6 +53,7 @@ nav a{
 .let-white{
   color:white;
   margin-bottom:50px;
+  font-family: 'Times New Roman', Times, serif;
 }
 .espace {
     margin-left:25%;
@@ -67,6 +69,7 @@ nav a{
 }
 .p-center {
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 /*Componentes*/
 .card {

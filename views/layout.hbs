@@ -4,24 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/menustyle.css"/>
   <title>Urbike</title>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 
 <div class="menu">
   <nav>
-    <a href="/inicio">Urbike</a>
-    <a href="/data">Primera rodada</a>
-    <a href="/foro">Foro</a>
-    <a href="/routes">Mapa</a>
-    {{#if user}}
-      <a href="/profile">Perfil</a>
-    {{else }}
-    <a href="/signup">Regístrate</a>
-    <a href="/login">Entra</a>
-    {{/if }}
+    <ul>
+      <li><a href="/inicio">Urbike</a></li>
+      <li><a href="/data">Primera rodada</a></li>
+      <li><a href="/foro">Foro</a></li> 
+      <li><a href="/routes">Mapa</a></li> 
+      {{#if user}}
+        <li><a href="/profile">Perfil</a>
+          <ul class="dropdown">
+            <li><a href="/profile/misposts">Entadas</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Cierra sesión</a></li>
+          </ul>
+        </li>
+      {{else }}
+      <li><a href="/signup">Regístrate</a></li>
+      <li><a href="/login">Entra</a></li> 
+      {{/if }}
+    </ul>
   </nav>
 </div>
 

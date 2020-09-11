@@ -1,0 +1,384 @@
+/*////////////////////////// Foro //////////////////*/
+
+
+/* Categorías */
+
+body {
+  background-color: var(--gray);
+  font-family: 'Oxygen', sans-serif;
+  margin: 0;
+  line-height: 20px;
+}
+
+.foro{
+  padding: 60px;
+  background-color: white;
+}
+
+.foro>nav{
+  position: fixed;
+  margin-top: 5vh;
+}
+
+.foro>nav div:nth-child(1){
+  background-color: var(--red);
+  width: 13vw;
+  padding: 1vh 1.3vw;
+  color: white;
+  border-radius: 15px;
+}
+
+.foro ul{
+  padding-left: 20px;
+}
+
+.foro li {
+  list-style-type: none;
+  margin: 2vh 0;
+}
+
+.foro>nav div:nth-child(2){
+  margin: 2vw 0;
+}
+
+.foro nav button{
+  background-color: var(--blue);
+  border: none;
+  border-radius: 15px;
+  width: 15vw;
+  padding: 1vw;
+  font-size: 1em;
+  transform: scale(1);
+  transition: all 1s;
+  margin-top: 2vh;
+}
+
+.foro nav a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.foro nav button:hover{
+  transform: scale(1.1);
+  background: var(--red);
+  transition: all 0.7s;
+}
+
+.foro ul a,
+.foro>nav div:nth-child(2)>a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.foro ul a::after{
+  content: "";
+  position: absolute;
+  bottom: 0 ;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: bottom right;
+  background-color: white;
+}
+
+.foro ul a:hover::after{
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+
+/* Entradas */
+
+.foro h2{
+  color: var(--gray);
+  font: 5vw 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 4vh 2vw 1vw;
+  width: 100%;
+}
+
+.foro>section>h3{
+  width: 100%;
+  text-align: center;
+  margin: 2vw;
+  line-height: 2vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.foro>section{
+  margin: 0 5vw 0 20vw;
+}
+
+.foro>section>div>div{
+  display: flex;
+  background-color: var(--blue);
+  margin: 4vh;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.foro>section>div>div>div:nth-child(1){
+  width: 40%;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0;
+}
+
+.foro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foro>section>div>div>div:nth-child(2){
+  margin-left: 2vw;
+  color: white;
+  position: relative;
+  width: 50%;
+}
+
+.forocontent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#forobtn{
+  width: 18vw;
+  margin: 2vw 9vw;
+}
+.foro section button{
+  background-color:  rgb(2, 128, 144);
+  border: none;
+  border-radius: 15px;
+  padding: 1vw;
+  font-size: 1vw;
+  transform: scale(1);
+  transition: all 1s;
+}
+
+.foro section a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.foro section button:hover{
+  transform: scale(1.1);
+  background: var(--red);
+  transition: all 0.7s;
+}
+
+.foro>section p,
+.detalles p{
+  text-align: justify;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+
+/* Detalles de posts */
+
+.detalles{
+  background-color: white;
+  display: flex;
+  padding: 15vh 3vw;
+  color: white;
+}
+
+.detalles>div:nth-child(1){
+  width: 45%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.detalles img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.detalles>div:nth-child(1) button{
+  background-color:  var(--red);
+  border: none;
+  border-radius: 15px;
+  width: 18vw;
+  padding: 1vw;
+  font-size: 1vw;
+  transform: scale(1);
+  transition: all 1s;
+  margin: 2vh 10vw;
+}
+
+.detalles>div:nth-child(1) a{
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.detalles>div:nth-child(1) button:hover{
+  transform: scale(1.1);
+  background: var(--blue);
+  transition: all 0.7s;
+}
+
+.detalles>div:nth-child(2){
+  margin-left: 2vw;
+  width: 55%;
+}
+
+.detalles>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
+  text-align: right;
+  margin: 0 2vw;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+}
+
+.detalles>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:last-child{
+  width: 5vw;
+  height: 5vw;
+  margin: 1vw;
+}
+
+.detalles>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.detalles>div:nth-child(2)>div:nth-child(1){
+  background-color: var(--blue);
+  padding: 0 2vw 2vh;
+  border-radius: 15px 15px 0 0;
+}
+
+.detalles>div:nth-child(2)>div:nth-child(2){
+  background-color: rgba(58,62,67, .2);
+  color: rgba(0,0,0,.8);
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  line-height: 22px;
+}
+
+.foro h3{
+  font: 1.3em 'Montserrat', sans-serif bold;
+  margin: 2vw 0;
+  
+}
+
+.detalles h3{
+  font: 22px 'Montserrat', sans-serif;
+
+}
+
+h4 {
+  margin: 0;
+  font: 22px 'Montserrat', sans-serif;
+}
+
+.detalles form textarea{
+  width: 99%;
+  font: .9em 'Oxygen', sans-serif;
+  padding: 8px;
+}
+
+.detalles form button{
+  background-color: rgb(2, 128, 144);
+  border: none;
+  border-radius: 15px;
+  width: 10vw;
+  padding: .5vw;
+  font-size: 1vw;
+  transform: scale(1);
+  transition: all 1s;
+  margin-top: 1vh;
+  color: white;
+}
+
+
+.detalles form a,
+.perfil button a{
+  text-decoration: none;
+  color: white;
+}
+
+.detalles form button:hover{
+  transform: scale(1.1);
+  background: var(--red);
+  transition: all 0.7s;
+}
+
+/* Perfil */
+
+.perfil{
+  background-color: white;
+  padding: 15vh 3vw;
+  display: flex;
+  height: 45vh;
+}
+
+.perfil img{
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.perfil div:nth-child(2){
+  background-color: var(--blue);
+  width: 40%;
+  border-radius: 15px;
+  margin-left: 3vw;
+
+}
+
+.perfil h3{
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  padding: 3vh 0;
+}
+
+.perfil button:hover{
+  transform: scale(1.1);
+  background: rgba(58,62,67, 1);
+  transition: all 0.7s;
+}
+
+.perfil button{
+  background-color: rgba(255,111,106, .9);
+  border: none;
+  border-radius: 15px;
+  width: 20vw;
+  padding: 1vw;
+  font-size: 1.3vw;
+  transform: scale(1);
+  transition: all 1s;
+  margin: 1vh;
+  position: relative;
+  left: 9vw;
+}
+
+#profilename{
+  margin: 0;
+}
+
+/* User posts */
+
+.userpostsbtn{
+  width: 12vw;
+  margin: 3vw 1vw;
+}

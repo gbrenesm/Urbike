@@ -12,17 +12,19 @@ body {
 
 
 h1 {
-  color: #006400;
+  color: rgba(255,111,106,1);
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   padding: 100px 0 4vh;
   margin: 0;
-
 }
 
+p{
+  
+}
 
 .mapa>nav>ul {
-  background: #006400;
+  background:rgba(255,111,106,1);
   height: 50px;
   display:flex;
   justify-content: space-between;
@@ -86,4 +88,8 @@ ul li ul li{
 
 .menu{
   display: none;
+}
+
+iframe{
+  margin: 2vw;
 }

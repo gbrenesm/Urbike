@@ -5,11 +5,11 @@ exports.profileView = async (req, res) => {
   res.render("profile/profile", { user })
 }
 
-exports.profileConfig = async (req, res) => {
+exports.profileConfigName = async (req, res) => {
   const { username } = req.body
   console.log(username)
   let user
-  if(req.file) {
+  if (req.file) {
     user = await User.findByIdAndUpdate(req.user.id, {
       profilePhoto: req.file.path,
       username
@@ -19,6 +19,5 @@ exports.profileConfig = async (req, res) => {
       username
     }, {new: true, rawResult: true })
   }
-  res.redirect("/inicio")
-  //res.redirect(req.get('referer'))
+  res.redirect(req.get('referer'))
 }

@@ -4,7 +4,7 @@
 <main class="foro">
   <nav>
     <div>
-      <h3><a href="/foro">Categorías</a></h3>
+      <h3 id="cattitle"><a href="/foro">Categorías</a></h3>
         <ul>
           <li><a href="/ayuda">Ayuda</a></li>
           <li><a href="/ciclovia">Ciclovía</a></li>
@@ -26,13 +26,9 @@
             <img src="{{photo}}" alt="{{title}}">
           </div>
           <div>
-            <div class="forocontent">
               <h3>{{title}}</h3>
               <p>{{content}}</p>
-            </div>
-            <div>
-              <button id="forobtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
-            </div>
+              <button><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
           </div>
         </div>
       {{/each}}

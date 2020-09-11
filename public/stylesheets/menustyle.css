@@ -77,9 +77,10 @@ ul li ul li{
   color: var(--gray);
 }
 
-nav div{
+#signup{
   display: flex;
 }
-nav div li{
+
+#signup li{
   padding: 0 1vw;
 }

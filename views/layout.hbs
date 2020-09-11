@@ -19,14 +19,14 @@
       <li><a href="/routes">Mapa</a></li> 
       {{#if user}}
         <li><a href="/profile">Perfil <span><i class="fas fa-angle-down"></i></span></a>
-          <ul class="dropdown">
-            <li><a href="/profile/misposts">Entadas</a></li>
+          <ul>
+            <li><a href="/profile/misposts">Tus entradas</a></li>
             <li><a href="/profile">Configuración</a></li>
             <li><a href="/logout">Cierra sesión</a></li>
           </ul>
         </li>
       {{else }}
-      <div>
+      <div id="signup">
         <li><a href="/signup">Regístrate</a></li>
         <li><a href="/login">Inicia sesión</a></li> 
       </div>

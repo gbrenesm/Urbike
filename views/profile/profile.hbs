@@ -1,15 +1,13 @@
-<link rel="stylesheet" href="/stylesheets/forostyle.css" />
+<link rel="stylesheet" href="/stylesheets/profilestyle.css" />
 
 
-<section class="perfil">
-  <section>
+<main>
+  <div>
     <img src="{{user.profilePhoto}}" alt="{{user.username}}">
     <h3 id="profilename">{{user.username}}</h3>
-    <button><a href="/profile/misposts">Tus entradas</a></button>
-    <br>
-    <button><a href="/logout">Cierra la sesión</a></button>
-  </section>
+  </div>
   <div>
+    <h3>Configuración</h3>
     <form action="/profile" method="POST" enctype="multipart/form-data">
       <div>
         <label for="username">Nuevo nombre de usuario</label>
@@ -24,4 +22,9 @@
       </div>
   </form>
   </div>
-</section>
+  <div>
+      <button><a href="/profile/misposts">Tus entradas</a></button>
+      <br>
+      <button><a href="/logout">Cierra la sesión</a></button>
+    </div>
+</main>

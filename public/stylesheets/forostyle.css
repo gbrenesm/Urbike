@@ -31,6 +31,10 @@ body {
   border-radius: 15px;
 }
 
+#cattitle{
+  font-size: 1.2em;
+  margin-top: 3vh;
+}
 .foro ul{
   padding-left: 20px;
 }
@@ -60,6 +64,7 @@ body {
   color: white;
   text-decoration: none;
   position: relative;
+  font-size: 20px;
 }
 
 .foro nav button:hover{
@@ -122,7 +127,7 @@ body {
   margin: 4vh;
   border-radius: 15px;
   width: 100%;
-  height: auto;
+  height: 110%;
 }
 
 .foro>section>div>div>div:nth-child(1){
@@ -144,25 +149,19 @@ body {
   position: relative;
   width: 50%;
 }
-
-.forocontent{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#forobtn{
-  width: 18vw;
-  margin: 2vw 9vw;
+.foro section p{
+  margin-bottom: 6vh;
 }
 .foro section button{
   background-color:  rgb(2, 128, 144);
   border: none;
   border-radius: 15px;
   padding: 1vw;
-  font-size: 1vw;
+  font-size: 16px;
   transform: scale(1);
   transition: all 1s;
+  width: 18vw;
+  margin: 2vw 9vw;
 }
 
 .foro section a{
@@ -175,6 +174,12 @@ body {
   transform: scale(1.1);
   background: var(--red);
   transition: all 0.7s;
+}
+
+.foro h3{
+  font-family: 'Montserrat', sans-serif bold;
+  font-size: 22px;
+  margin: 3vw 0 0;
 }
 
 .foro>section p,
@@ -276,12 +281,6 @@ body {
   line-height: 22px;
 }
 
-.foro h3{
-  font: 1.3em 'Montserrat', sans-serif bold;
-  margin: 2vw 0;
-  
-}
-
 .detalles h3{
   font: 22px 'Montserrat', sans-serif;
 
@@ -292,7 +291,7 @@ h4 {
   font: 22px 'Montserrat', sans-serif;
 }
 
-.detalles form textarea{
+.textarea{
   width: 99%;
   font: .9em 'Oxygen', sans-serif;
   padding: 8px;
@@ -324,58 +323,20 @@ h4 {
   transition: all 0.7s;
 }
 
-/* Perfil */
 
-.perfil{
-  background-color: white;
-  padding: 15vh 3vw;
+form {
   display: flex;
-  height: 45vh;
-}
-
-.perfil img{
-  border-radius: 15px;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
-.perfil>div:nth-child(2){
-  background-color: var(--blue);
-  width: 35%;
-  border-radius: 15px;
-  margin-left: 3vw;
+form div{
+  padding: 4vh 6vw 0;
 }
 
-.perfil h3{
-  text-align: center;
-  color: white;
-  font-size: 2em;
-  padding: 3vh 0;
-}
 
-.perfil button:hover{
-  transform: scale(1.1);
-  background: rgba(58,62,67, 1);
-  transition: all 0.7s;
-}
-
-.perfil button{
-  background-color: rgba(255,111,106, .9);
-  border: none;
-  border-radius: 15px;
-  width: 20vw;
-  padding: 1vw;
-  font-size: 1.3vw;
-  transform: scale(1);
-  transition: all 1s;
-  margin: 1vh;
-}
-
-#profilename{
-  margin: 0;
-  color: var(--gray);
-}
 
 /* User posts */
 
@@ -384,16 +345,7 @@ h4 {
   margin: 3vw 1vw;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 auto;
-}
 
-form div{
-  padding: 4vh 6vw 0;
-}
 
 label{
   font-size: 22px;

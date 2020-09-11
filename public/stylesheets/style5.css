@@ -15,33 +15,75 @@ h1 {
   color: #006400;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  padding: 65px;
+  padding: 100px 0 4vh;
   margin: 0;
 
 }
 
-nav {
+
+.mapa>nav>ul {
   background: #006400;
-  height: 60px;
-  width: 100%;
-  /*border-bottom: 1px solid rgba(75,78,81,1);*/
+  height: 50px;
   display:flex;
   justify-content: space-between;
-  font-family: 'Times New Roman', Times, serif;
-  position: fixed;
-}
-
-nav a{
-  font-family: impact;
-  color: #DCDCDC;
-  text-decoration: none;
-  font-size: 20px;
-  flex: 1;
-  display:flex;
-  justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 2vh 6vw;
 }
 
-nav>:first-child{
-  font-size: 1.9vw;
+.mapa nav>ul>li:first-child a{
+  font-size: 2vw;
+}
+
+.mapa>nav a{
+  text-decoration: none;
+  color: var(--gray);
+  font: 1.5vw impact;
+}
+
+.mapa li{
+  list-style: none;
+  height: auto;
+}
+.mapa{
+  position: fixed;
+  margin: 0;
+  z-index: 20;
+  width: 100%;
+}
+
+ul li ul {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  right: 1vw;
+  padding: 3vh 1vw;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  display: block;
+  background-color: #006400;
+  border-radius: 2px;
+}
+
+ul li ul li{
+  padding: 2vh;
+}
+
+.fas {
+  color: var(--gray);
+}
+
+#signup{
+  display: flex;
+}
+
+#signup li{
+  padding: 0 1vw;
+}
+
+.menu{
+  display: none;
 }

@@ -1,9 +1,25 @@
+/*rgba(75,78,81,1) - gris
+rgba(255,111,106,1) - rojo
+font-family: 'Gayathri', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oxygen', sans-serif;
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@700&family=Montserrat:wght@400;500;700&family=Oxygen:wght@300;700&display=swap');
 
 :root {
   --gray: rgba(58,62,67, .8);
   --red:  rgba(255,111,106, 1);
   --blue: rgba(2, 128, 144, .8);
+}
+
+body{
+  font-family: 'Oxygen', sans-serif;
+  margin: 0;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .menu>nav>ul {
@@ -41,7 +57,8 @@ ul li ul {
   visibility: hidden;
   display: none;
   position: absolute;
-  padding: 1vw;
+  right: 1vw;
+  padding: 3vh 1vw;
 }
 
 ul li:hover > ul,
@@ -53,5 +70,16 @@ ul li ul:hover {
 }
 
 ul li ul li{
+  padding: 2vh;
+}
 
+.fas {
+  color: var(--gray);
+}
+
+nav div{
+  display: flex;
+}
+nav div li{
+  padding: 0 1vw;
 }

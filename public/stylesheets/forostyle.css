@@ -1,13 +1,16 @@
-/*////////////////////////// Foro //////////////////*/
-
+:root {
+  --gray: rgba(58,62,67, .8);
+  --red:  rgba(255,111,106, 1);
+  --blue: rgba(2, 128, 144, .8);
+}
 
 /* Categorías */
 
 body {
   background-color: var(--gray);
   font-family: 'Oxygen', sans-serif;
-  margin: 0;
   line-height: 20px;
+  margin: 0;
 }
 
 .foro{
@@ -337,12 +340,11 @@ h4 {
   object-fit: contain;
 }
 
-.perfil div:nth-child(2){
+.perfil>div:nth-child(2){
   background-color: var(--blue);
-  width: 40%;
+  width: 35%;
   border-radius: 15px;
   margin-left: 3vw;
-
 }
 
 .perfil h3{
@@ -368,12 +370,11 @@ h4 {
   transform: scale(1);
   transition: all 1s;
   margin: 1vh;
-  position: relative;
-  left: 9vw;
 }
 
 #profilename{
   margin: 0;
+  color: var(--gray);
 }
 
 /* User posts */
@@ -381,4 +382,36 @@ h4 {
 .userpostsbtn{
   width: 12vw;
   margin: 3vw 1vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+form div{
+  padding: 4vh 6vw 0;
+}
+
+label{
+  font-size: 22px;
+  font-weight: bolder;
+  color: white;
+}
+
+input{
+  width: 20vw;
+  height: 28px;
+  font: 1em 'Oxygen', sans-serif;
+  margin-top: 2vh;
+}
+
+[type="file"]{
+  color: white;
+}
+
+form button{
+  color: white;
 }

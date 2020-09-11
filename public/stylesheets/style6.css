@@ -4,28 +4,7 @@
   --blue: rgba(2, 128, 144, .8);
 }
 
-body{
-  margin:0;
-}
 
-nav {
-  background: rgba(255,111,106,1);
-  height: 60px;
-  /*border-bottom: 1px solid rgba(75,78,81,1);*/
-  display:flex;
-  justify-content: space-between;
-  font-family: 'Times New Roman', Times, serif;
-}
-nav a{
-  font-family: impact;
-  color: rgba(75,78,81,1);
-  text-decoration: none;
-  font-size: 20px;
-  flex: 1;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .contenedor-formulario {
   background:var(--red);
@@ -102,3 +81,7 @@ select {
   border-radius: 15px;
   border: 3px double var(--red); 
 } 
+
+.menu{
+  display: none;
+}

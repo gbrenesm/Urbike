@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/stylesheets/menustyle.css"/>
+  <script src="https://kit.fontawesome.com/5bfc2bf78d.js" crossorigin="anonymous"></script>
   <title>Urbike</title>
 </head>
 <body>
@@ -17,16 +18,18 @@
       <li><a href="/foro">Foro</a></li> 
       <li><a href="/routes">Mapa</a></li> 
       {{#if user}}
-        <li><a href="/profile">Perfil</a>
+        <li><a href="/profile">Perfil <span><i class="fas fa-angle-down"></i></span></a>
           <ul class="dropdown">
             <li><a href="/profile/misposts">Entadas</a></li>
-            <li><a href="#">Configuración</a></li>
-            <li><a href="#">Cierra sesión</a></li>
+            <li><a href="/profile">Configuración</a></li>
+            <li><a href="/logout">Cierra sesión</a></li>
           </ul>
         </li>
       {{else }}
-      <li><a href="/signup">Regístrate</a></li>
-      <li><a href="/login">Entra</a></li> 
+      <div>
+        <li><a href="/signup">Regístrate</a></li>
+        <li><a href="/login">Inicia sesión</a></li> 
+      </div>
       {{/if }}
     </ul>
   </nav>

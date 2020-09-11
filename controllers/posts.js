@@ -54,7 +54,8 @@ exports.postDetail = async (req, res) => {
 
 exports.userPostsView = async (req, res) => {
   const posts = await Post.find({ creatorId: req.user.id })
-  res.render("posts/userposts", { posts })
+  const user = await User.findById(req.user)
+  res.render("posts/userposts", { posts, user })
 }
 
 

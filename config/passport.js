@@ -40,7 +40,6 @@ passport.use(
             callbackURL: "/auth/google/callback"
         },
         async (accessToken, refreshToken, profile, done) => {
-          //console.log(profile)
             const user = await User.findOne({ googleID: profile.id })
         if (!user) {
             const user = await User.create({
@@ -65,7 +64,6 @@ passport.use(
     profileFields: ["id", "displayName", "photos", "email"]
   },
   async (accessToken, refreshToken, profile, done) => {
-    console.log(profile)
     const user = await User.findOne({facebookId: profile.id })
     if (!user){
       const user = await User.create({
@@ -81,7 +79,6 @@ passport.use(
   )
 )
 
-///////////Estrategia de Twitter///////////////
 
 
 /////////// Serealizar y deserealizer ///////////////
@@ -92,7 +89,7 @@ passport.serializeUser ((user, done) => {
 passport.deserializeUser(async (id, done) => {
   try{
       const user = await User.findById(id)
-      //delete user.password
+      delete user.password
       done(null, user)
   }
   catch(error){

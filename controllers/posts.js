@@ -8,7 +8,7 @@ exports.newPostView = async (req, res) => {
 }
 
 exports.newPostProcess = async (req, res) => {
-  const { title, content, category } = req.body //TODO labels
+  const { title, content, category } = req.body
   let post
   if (req.file){
     post = await Post.create({

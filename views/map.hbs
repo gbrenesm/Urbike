@@ -1,29 +1,5 @@
 <link rel="stylesheet" href="/stylesheets/style5.css"/>
 
-<div class="mapa">
-  <nav>
-    <ul>
-      <li><a href="/inicio">Urbike</a></li>
-      <li><a href="/data">Primera rodada</a></li>
-      <li><a href="/foro">Foro</a></li> 
-      <li><a href="/routes">Mapa</a></li> 
-      {{#if user}}
-        <li><a href="/profile">Perfil <span><i class="fas fa-angle-down"></i></span></a>
-          <ul>
-            <li><a href="/profile/misposts">Tus entradas</a></li>
-            <li><a href="/profile">Configuración</a></li>
-            <li><a href="/logout">Cierra sesión</a></li>
-          </ul>
-        </li>
-      {{else }}
-      <div id="signup">
-        <li><a href="/signup">Regístrate</a></li>
-        <li><a href="/login">Inicia sesión</a></li> 
-      </div>
-      {{/if }}
-    </ul>
-  </nav>
-</div>
 
 <h1>Rutas de la Ciudad de México</h1>
 <p>Mira el mapa de la CDMX con todas las ciclovías para que encuentres la ruta que necesites</p>

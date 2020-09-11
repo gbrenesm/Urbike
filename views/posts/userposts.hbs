@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/stylesheets/forostyle.css" />
+<link rel="stylesheet" href="/stylesheets/userpostyle.css" />
   
 <main class="foro">
   <nav>
@@ -8,6 +8,7 @@
   </nav>
   <section>
     <h2>Tus entradas</h2>
+    <h3>Revisa todas las entras que has hecho</h3>
     <div>
       {{#each posts}}
         <div>
@@ -17,8 +18,10 @@
           <div>
             <h3>{{title}}</h3>
             <p>{{content}}</p>
-            <button class="userpostsbtn"><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
-            <button class="userpostsbtn"><a href="/profile/{{_id}}">Elimina la entrada</a></button>
+            <div id="userpostsbtn">
+              <button><a href="/foro/{{_id}}">Detalles y comentarios</a></button>
+              <button><a href="/profile/{{_id}}">Elimina la entrada</a></button>
+            </div>
           </div>
         </div>
         {{else}}

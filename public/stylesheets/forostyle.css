@@ -14,7 +14,7 @@ body {
 }
 
 .foro{
-  padding: 60px;
+  padding: 80px 60px;
   background-color: white;
 }
 
@@ -102,7 +102,7 @@ body {
 /* Entradas */
 
 .foro h2{
-  color: var(--gray);
+  color: var(--red);
   font: 5vw 'Montserrat', sans-serif;
   text-align: center;
   margin: 4vh 2vw 1vw;
